@@ -1,6 +1,10 @@
 import '../main.dart';
 
-addTodo(String todo) {
-  int number = listTodo.length + 1;
-  listTodo[number] = todo;
+bool addTodo(String todo) {
+  if (todo != '') {
+    int number = listTodo.length + 1;
+    listTodo[number] = todo;
+    return true;
+  }
+  return false;
 }

@@ -9,7 +9,11 @@ viewAddTodo() {
   if (todo == "x") {
     print("Batal menambah Todolist\n");
   } else {
-    addTodo(todo);
-    print("Berhasil menambah Todolist\n");
+    var succes = addTodo(todo);
+    if (succes) {
+      print("Sukses menambah todolist\n");
+    } else {
+      print("Gagal menambah todolist\n");
+    }
   }
 }
